@@ -1,0 +1,55 @@
+<form action="/registrazione" method="post">
+    <div class="pagina" style="background-image: url('img/bg-01.jpeg');">
+        <div class="wrap-register">
+            <h2 class="text-center mb-5">Create New Account</h2>
+            <div class="form-row col">
+                <div class="form-group col">
+                    <label for="N">Nome : </label>
+                    <input class="form-control mb-1" type="text" id="N" placeholder="Your Name *" name="name" required>
+                </div>
+                <div class="form-group col">
+                    <label for="S">Cognome : </label>
+                    <input class="form-control mb-1" id="S" type="text" placeholder="Your Surname *" name="surname"
+                           required>
+                </div>
+            </div>
+
+            <div class="form-row col">
+                <div class="form-group col-md">
+                    <label for="E">Email : </label>
+                    <input type="email" class="form-control mb-1" id="E" placeholder="Your Email *" name="email"
+                           required>
+                </div>
+                <div class="form-group col-md">
+                    <label for="CI">Città: </label>
+                    <input type="text" class="form-control mb-2" id="CI" placeholder="Cassino"
+                           name="city" required>
+                </div>
+                <div class="form-group col-md">
+                    <label for="AD">Via: </label>
+                    <input type="text" class="form-control mb-2" id="AD" placeholder="Via esempio"
+                           name="address" required>
+                </div>
+            </div>
+
+            <div class="form-row col">
+                <div class="form-group col-md">
+                    <label for="P">Password : </label>
+                    <input type="password" class="form-control mb-1" id="P" placeholder="Select a Password *"
+                           name="password"
+                           required>
+                </div>
+                <div class="form-group col-md">
+                    <label for="CP">Conferma Password : </label>
+                    <input type="password" class="form-control mb-1" id="CP" placeholder="Confirm Password *"
+                           name="confirmpassword"
+                           required>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-lg btn-primary btn-block mt-5 mb-1"> Register</button>
+            </div>
+        </div>
+    </div>
+</form>

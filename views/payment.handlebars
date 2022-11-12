@@ -1,0 +1,74 @@
+<form action="/summary" method="post">
+    <div class="pagina" style="background-image: url('img/bg-01.jpeg');">
+        <div class="wrap-register">
+            <div class="form-row col mb-4">
+                <div class="form-group col-md">
+                    <label for="D"><b>Data</b></label>
+                    <input type="text" class="form-control" id="D" value="{{date}}" name="data" disabled>
+                </div>
+                <div class="form-group col-md">
+                    <label for="T"><b>Targa</b></label>
+                    <input type="text" class="form-control" id="T" value="{{targauto}}" name="tg" disabled>
+                </div>
+                <div class="form-group col-md">
+                    <label for="P"><b>Piano</b></label>
+                    <input type="text" class="form-control" id="P" value="{{piano}}" name="level" disabled>
+                </div>
+                <div class="form-group col-md">
+                    <label for="PS"><b>Posto Auto</b></label>
+                    <input type="text" class="form-control" id="PS" value="{{postoauto}}" name="posto" disabled>
+                </div>
+            </div>
+
+
+            <div class="pay col">
+
+                <div class="form-row col">
+                    <div class="form-group col-1 mt-5">
+                        <label for="importo"><b>Importo</b></label>
+                        <input type="text" class="form-control" id="importo" placeholder=" 1€ " disabled>
+                    </div>
+                </div>
+
+                <div class="form-row col">
+                    <div class="form-group col-md mt-3">
+                        <label for="carta"><b>Numero Carta</b></label>
+                        <input type="text" class="form-control" id="carta" placeholder="4432 1234 5432 2345" disabled>
+                    </div>
+                    <div class="form-group col-md mt-3">
+                        <label for="nome"><b>Nome sulla Carta</b></label>
+                        <input type="text" class="form-control" id="nome" placeholder="Pippo Baudo" disabled>
+                    </div>
+                </div>
+
+                <div class="form-row col">
+                    <div class="form-group col-md">
+                        <label for="s"><b>Data di Scadenza</b></label>
+                        <input type="text" class="form-control" id="s" placeholder="11/2024" disabled>
+                    </div>
+                    <div class="form-group col-md">
+                        <label for="cvc"><b>CVC</b></label>
+                        <input type="text" class="form-control" id="cvc" placeholder="123" disabled>
+                    </div>
+                </div>
+
+                <div class="form-row col">
+                    <button class="btn btn-lg btn-primary btn-block mt-3 mb-5" type="submit">Conferma Pagamento</button>
+                </div>
+
+                <div class="text-center form-row mt-2">
+                    <div class="form-group col-md">
+                        <label>OPPURE<br>PAGA CON PAYPAL</label>
+                    </div>
+                </div>
+
+                <div class="text-center mb-5">
+                    <a href="https://paypal.me/FBucci?locale.x=it_IT"><img src="img/paypall.png" width="300px"/></a>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</form>

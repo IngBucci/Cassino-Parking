@@ -1,0 +1,60 @@
+<form action="/modificaDati" method="post">
+    <div class="pagina" style="background-image: url('img/bg-01.jpeg');">
+        <div class="wrap-register">
+            <div class="form-row col">
+                <div class="form-group col-md">
+                    <label for="inputName"><b>Nome</b></label>
+                    <input type="text" class="form-control" id="inputName" value="{{profile}}" name="name">
+                </div>
+                <div class="form-group col-md">
+                    <label for="inputLastName"><b>Cognome</b></label>
+                    <input type="text" class="form-control" id="inputLastNameName" value="{{cognome}}" name="lastname">
+                </div>
+            </div>
+
+            <div class="form-row col">
+                <div class="form-group col-md">
+                    <label for="inputAddress"><b>Via</b></label>
+                    <input type="text" class="form-control" id="inputAddress" value="{{address}}"
+                           placeholder="Via Ermenegildo, 34" name="address">
+                </div>
+                <div class="form-group col-md">
+                    <label for="inputCity"><b>Città</b></label>
+                    <input type="text" class="form-control" id="inputCity" value="{{city}}" placeholder="Pordenone" name="city">
+                </div>
+            </div>
+
+            <div class="form-row col">
+                <div class="form-group col">
+                    <label for="inputEmail"><b>Email</b></label>
+                    <input type="text" class="form-control" id="inputEmail" value="{{email}}" name="email">
+                </div>
+            </div>
+
+            <div class="form-row col">
+                <div class="form-group col-md">
+                    <label for="inputOldPaswd"><b>Old Password</b></label>
+                    <input type="password" class="form-control" id="inputOldPaswd" name="oldPswd">
+                </div>
+                <div class="form-group col-md">
+                    <label for="inputNewPaswd"><b>New Password</b></label>
+                    <input type="password" class="form-control" id="inputNewPaswd" name="newPswd">
+                </div>
+            </div>
+
+            <div class="form-row col">
+                <button class="btn btn-lg btn-primary btn-block mt-4 mb-1" type="submit">Modifica</button>
+            </div>
+
+
+        </div>
+    </div>
+</form>
+
+
+
+
+
+
+
+

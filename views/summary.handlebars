@@ -1,0 +1,99 @@
+<div class="pagina" style="background-image: url('img/bg-01.jpeg');">
+    <div class="wrap-summary">
+        <div class="text-center col mb-5">
+
+            <h2> RIEPILOGO PRENOTAZIONE </h2>
+        </div>
+
+        <div class="row">
+            <div class="col">
+
+                <div class="row row-cols-2">
+                    <div class="col"><b>Data</b></div>
+                    <div class="col">{{data}}</div>
+                </div>
+
+                <div class="row row-cols-2 ">
+                    <div class="col"><b>Targa</b></div>
+                    <div class="col">{{targa}}</div>
+                </div>
+
+                <div class="row row-cols-2 ">
+                    <div class="col"><b>Piano</b></div>
+                    <div class="col">{{piano}}</div>
+                </div>
+
+                <div class="row row-cols-2">
+                    <div class="col"><b>Posto</b></div>
+                    <div class="col">{{ps}}</div>
+                </div>
+
+                <div class="row row-cols-2">
+                    <div class="col"><b>Costo</b></div>
+                    <div class="col"> 1,00 €</div>
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div id="qr"></div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <button id="btn" class="btn btn-lg btn-primary btn-block mt-5 mb-1">Save PDF</button>
+            </div>
+            <div class="col">
+                <form action="/backHome" method="get">
+                    <button type="submit" class="btn btn-lg btn-primary btn-block mt-5 mb-1">Back Home</button>
+                </form>
+            </div>
+
+            <div class="col">
+                <button id="qr-data" class="btn btn-lg btn-primary btn-block mt-5 mb-1"
+                        value="Data:  {{data}}
+                Targa: {{targa}}
+                Piano: {{piano}}
+                Posto: {{ps}}">Genera Qr Code
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    const btn = document.getElementById("btn");
+    const pages = document.getElementsByClassName('wrap-summary');
+
+    btn.addEventListener("click", function () {
+
+        html2PDF(pages, {
+            jsPDF: {
+                format: 'a4',
+            },
+            html2canvas: {
+                scrollX: 0,
+                scrollY: -window.scrollY,
+            },
+            imageType: 'image / jpeg',
+            output: './RiepilogoPrenotazione.pdf'
+        });
+    });
+
+</script>
+
+<script>
+    const qrdata = document.getElementById('qr-data');
+    const qrcode = new QRCode(document.getElementById('qr'));
+
+    qrdata.addEventListener('click', function () {
+        var data = qrdata.value;
+        qrcode.makeCode(data);
+    })
+
+</script>

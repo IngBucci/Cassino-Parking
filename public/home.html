@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <script src="qrcode/jquery.min.js"></script>
+    <script src="qrcode/qrcode.js"></script>
+
+</head>
+<body>
+<h1>WELCOME TO CASSINO PARKING</h1>
+
+
+<input type="button" id="qr-data" onclick="QR()" value="GENERA PDF">
+
+<input type="text" id="qr-data2" onchange="QR()">
+
+<div id="qr"></div>
+
+
+</body>
+
+
+<script>
+    var qrdata = document.getElementById('qr-data');
+    var qrcode = new QRCode(document.getElementById('qr'));
+
+
+    function QR() {
+        var data = qrdata.value;
+
+        qrcode.makeCode(data);
+        //alert(data);
+    }
+</script>
+</html>

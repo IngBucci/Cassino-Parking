@@ -1,0 +1,38 @@
+<div class="pagina" style="background-image: url('img/bg-01.jpeg');">
+    <div class="wrap-register">
+        <h2>Le mie Prenotazioni</h2>
+
+
+
+
+        {{#each prenotazioni}}
+
+            <div class="card card-body mb-5">
+                <h4>Data:       {{data}}</h4>
+                <h4>Targa:      {{license}}</h4>
+                <h4>Piano:      {{level}}</h4>
+                <h4>Posto:      {{parkingSpace}}</h4>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <a class="btn btn-lg btn-primary btn-block mt-5 mb-1" type="submit"
+                           href="/reportAbuse">Segnalazione</a>
+                    </div>
+
+                    <form action="/myReservations/{{id}}?_method=DELETE" method="post">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <div class="col">
+                            <button class="btn btn-lg btn-danger btn-block mt-5 mb-1" type="submit">Cancella
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        {{else}}
+            <h4>No archived Reservation</h4>
+        {{/each}}
+
+    </div>
+</div>
